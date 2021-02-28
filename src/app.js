@@ -25,6 +25,7 @@ app.get("/", (req, res) => {
   res.send("Welcome to Revie Housing inc");
 });
 
+// console log port
 app.listen(port, () => {
   console.log(`Server Running on: ${port}`);
 });
