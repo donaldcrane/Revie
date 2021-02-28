@@ -7,6 +7,7 @@ Revie is a hypothetical platform where users can sign up with their basic inform
 A detailed documentation of the api can be found here: [API Documentation](https://documenter.getpostman.com/view/11971882/TWDdiYeC#fd839427-74df-409a-9668-8fb0620faa9a)
 
 ##Run Project Locally##
+
 * Clone the project
 * cd into the project's folder and run npm install to install dependencies
 * Create a .env file and add PORT value, JWT_KEY, COOKIE_KEY to it
@@ -14,6 +15,7 @@ A detailed documentation of the api can be found here: [API Documentation](https
 
 
 ##HTTP Requests##
+
 All API requests are made by sending a secure HTTPS request using one of the following methods:
 
 * POST Create a resource
@@ -21,6 +23,7 @@ All API requests are made by sending a secure HTTPS request using one of the fol
 * For POST, the body of your request must be a JSON payload.
 
 ##HTTP Response Codes##
+
 Each response will be returned with one of the following HTTP status codes:
 
 *200 OK Successful request
