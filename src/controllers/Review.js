@@ -33,7 +33,7 @@ export default class AdminReviewController {
       const createdReview = await addReview(newReview);
       return res.status(201).json({ status: 201, message: "A Review has been added.", data: createdReview, });
     } catch (error) {
-      return res.status(500).json({ status: 500, error: error.message });
+      return res.status(500).json({ status: 500, error: "Server error." });
     }
   }
 

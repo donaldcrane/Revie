@@ -43,7 +43,7 @@ export default class UserController {
         message: "User created Successfuly, Kindly log in!"
       });
     } catch (error) {
-      return res.status(500).json({ status: 500, error: error.message });
+      return res.status(500).json({ status: 500, error: "Server error." });
     }
   }
 
@@ -69,7 +69,7 @@ export default class UserController {
         data: token
       });
     } catch (error) {
-      return res.status(500).json({ status: 500, error: error.message });
+      return res.status(500).json({ status: 500, error: "Server error." });
     }
   }
 
@@ -90,7 +90,7 @@ export default class UserController {
         data: updatedProfile[1]
       });
     } catch (error) {
-      return res.status(500).json({ status: 500, error: error.message });
+      return res.status(500).json({ status: 500, error: "Resource not found." });
     }
   }
 
@@ -104,7 +104,7 @@ export default class UserController {
       const users = await getAllUsers();
       return res.status(200).json({ status: 200, message: "Successfully retrived all Users", data: users });
     } catch (error) {
-      return res.status(500).json({ status: 500, error: error.message });
+      return res.status(500).json({ status: 500, error: "Resource not found." });
     }
   }
 }
