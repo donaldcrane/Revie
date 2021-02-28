@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
   });
   Profile.associate = models => {
     Profile.belongsTo(models.Users, {
-      as: "profileDetails",
+      as: "profiles",
       foreignKey: "userId",
     });
   };
