@@ -3,10 +3,10 @@ Revie is a hypothetical platform where users can sign up with their basic inform
 
 [![Coverage Status](https://coveralls.io/repos/github/donaldcrane/Revie/badge.svg?branch=develop)](https://coveralls.io/github/donaldcrane/Revie?branch=develop)
 
-##Documentation##
+**Documentation**
 A detailed documentation of the api can be found here: [API Documentation](https://documenter.getpostman.com/view/11971882/TWDdiYeC#fd839427-74df-409a-9668-8fb0620faa9a)
 
-##Run Project Locally##
+**Run Project Locally**
 
 * Clone the project
 * cd into the project's folder and run npm install to install dependencies
@@ -14,7 +14,7 @@ A detailed documentation of the api can be found here: [API Documentation](https
 * Run npm run start:dev to start the server
 
 
-##HTTP Requests##
+# HTTP Requests
 
 All API requests are made by sending a secure HTTPS request using one of the following methods:
 
@@ -22,7 +22,7 @@ All API requests are made by sending a secure HTTPS request using one of the fol
 * GET Get a resource or list of resources
 * For POST, the body of your request must be a JSON payload.
 
-##HTTP Response Codes##
+# HTTP Response Codes
 
 Each response will be returned with one of the following HTTP status codes:
 
