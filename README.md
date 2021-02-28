@@ -3,7 +3,8 @@ Revie is a hypothetical platform where users can sign up with their basic inform
 
 [![Coverage Status](https://coveralls.io/repos/github/donaldcrane/Revie/badge.svg?branch=develop)](https://coveralls.io/github/donaldcrane/Revie?branch=develop)
 
-**Documentation**
+# Documentation
+
 A detailed documentation of the api can be found here: [API Documentation](https://documenter.getpostman.com/view/11971882/TWDdiYeC#fd839427-74df-409a-9668-8fb0620faa9a)
 
 **Run Project Locally**
