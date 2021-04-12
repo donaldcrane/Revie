@@ -1,6 +1,8 @@
 # Revie
 Revie is a hypothetical platform where users can sign up with their basic information and post reviews about apartments they've previously lived in. 
 
+[![](https://img.shields.io/badge/Protected_by-Hound-a873d1.svg)](https://houndci.com)
+[![NodeJS CI](https://github.com/donaldcrane/Revie/actions/workflows/node.js.yml/badge.svg)](https://github.com/donaldcrane/Revie/actions/workflows/node.js.yml)
 [![Coverage Status](https://coveralls.io/repos/github/donaldcrane/Revie/badge.svg?branch=develop)](https://coveralls.io/github/donaldcrane/Revie?branch=develop)
 
 # Documentation
