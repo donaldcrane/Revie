@@ -25,30 +25,32 @@ jobs:
           --health-retries 5
         ports:
           - 5432:5432
-          
+
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - run: npm run build --if-present
-    - name: Connect to PostgreSQL
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - run: npm run build --if-present
+      - name: Connect to PostgreSQL
 
-      run: node src/models/index
-      env:
-        POSTGRES_HOST: postgres
-        POSTGRES_PORT: 5432
+        run: node src/models/index
+        env:
+          POSTGRES_HOST: postgres
+          POSTGRES_PORT: 5432
 
-    - run: npm run coverage
-      env:
-        NODE_ENV: test
-        JWT_KEY: ${{ secrets.JWT_KEY }}
-        COOKIE_KEY: ${{ secrets.COOKIE_KEY }}
-    - name: Coveralls
-      uses: coverallsapp/github-action@master
-      env:
-        COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+      - run: npm run coverage
+        env:
+          CI: true
+          NODE_ENV: test
+          TEST_DATABASE_URL: postgres://postgres:crane@localhost:5432/revieTest
+          JWT_KEY: ${{ secrets.JWT_KEY }}
+          COOKIE_KEY: ${{ secrets.COOKIE_KEY }}
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
