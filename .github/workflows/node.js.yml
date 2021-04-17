@@ -45,7 +45,7 @@ jobs:
         env:
           CI: true
           NODE_ENV: test
-          TEST_DATABASE_URL: postgres://localhost:5432/revieTest
+          TEST_DATABASE_URL: postgres://postgres:crane@localhost:5432/revie
           JWT_KEY: ${{ secrets.JWT_KEY }}
           COOKIE_KEY: ${{ secrets.COOKIE_KEY }}
       - name: Coveralls
